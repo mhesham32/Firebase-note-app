@@ -1,0 +1,146 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-family: 'Arvo', serif;
+}
+
+.container {
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.app-wrapper {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+#loading {
+  text-align: center;
+}
+
+.notes-header {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #030303;
+  color: white;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: none;
+  outline: none;
+}
+
+fieldset:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+fieldset:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#edit-note {
+  display: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.note-input {
+  margin: 0;
+  height: 50px;
+  padding-left: 5px;
+}
+
+.note-button {
+  margin: 0;
+  height: 50px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  outline: none;
+  border: 1px solid #030303;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.note-button:active {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.note-button:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.2;
+  cursor: not-allowed;
+  color: #eee;
+}
+
+.cancel {
+  color: darkred;
+  margin-left: 3px;
+}
+
+.single-note:not(last-child) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border: 1px solid #030303;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  transition: all ease-in-out 300ms;
+}
+
+.single-note:hover {
+  background-color: #030303;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.note-text {
+  margin-right: 5px;
+}
+
+.note-buttons {
+  display: flex;
+}
+
+.edit-note,
+.delete-note {
+  background-color: darkred;
+  margin-right: 5px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #030303;
+}
+
+.edit-note {
+  background-color: seagreen;
+}

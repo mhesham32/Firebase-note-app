@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Firebase Note App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Note App</h1>
+      <div class="app-wrapper">
+        <section class="forms-section">
+          <fieldset id="add-note">
+            <form action="" class="note-form" id="add-form">
+              <input
+                type="text"
+                class="note-input"
+                placeholder="add Note here..."
+              />
+              <button class="note-button">Add Note</button>
+            </form>
+          </fieldset>
+          <fieldset id="edit-note">
+            <form action="" class="note-form edit-form" id="edit-form">
+              <input type="text" class="note-input" />
+              <button class="note-button edit">Edit Note</button>
+              <button class="note-button cancel">Cancel</button>
+            </form>
+          </fieldset>
+        </section>
+        <section class="notes-section">
+          <h3 class="notes-header">
+            Notes
+          </h3>
+          <div id="notes-container"></div>
+        </section>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+    <script src="./ui-functions.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
