@@ -42,6 +42,10 @@ body {
   text-align: center;
 }
 
+#notes-container {
+  text-align: center;
+}
+
 .notes-header {
   text-transform: uppercase;
   text-align: center;

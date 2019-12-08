@@ -25,6 +25,10 @@ const db = firebase.firestore();
     const notes = await db.collection('notes').get();
     notesContainer.removeChild(loadingNode);
     notesContainer.innerHTML = '';
+    if (notes.empty) {
+      notesContainer.innerHTML = '<span>add some notes to show here</span>';
+      return;
+    }
     notes.forEach(note => {
       const { id } = note;
       const singleNote = note.data();
